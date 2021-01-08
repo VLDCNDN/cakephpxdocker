@@ -1,3 +1,3 @@
 # cakephpxdocker
  
-Just run `docker-composer up --build`
+run to current directory `docker-compose up --build`
