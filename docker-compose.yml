@@ -21,7 +21,11 @@ services:
     ports:
       - 80:80
     depends_on:
-      - db # start mysql before apache
+      - db # start db service before web
     volumes: 
-      - .:/var/www/html # put the contents of the apache/html in the container var/www/html
+      - .:/var/www/html # put the contents of the current directory in the container var/www/html
+    extra_hosts: 
+      - "local.cakexdocker:127.0.0.1"
+    hostname: local.cakexdocker
+    domainname: cakexdocker
 
